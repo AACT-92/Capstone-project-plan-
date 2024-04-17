@@ -14,7 +14,7 @@
 }
 
 a {
-  font-weight: 500;
+  margin: 10px;
   color: #646cff;
   text-decoration: inherit;
 }
@@ -23,7 +23,8 @@ a:hover {
 }
 
 body {
-  margin: 0;
+  margin: 40px;
+  padding: 50px;
   display: flex;
   place-items: center;
   min-width: 320px;

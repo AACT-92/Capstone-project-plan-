@@ -1,6 +1,14 @@
 import {StrictMode} from 'react'
-import {createRoot} from 'react-dom'
+import {createRoot} from 'react-dom/client'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
+//import AccountPage from './components/AccountPage'
+//import RegistrationPage from './components/RegistrationPage'
+//import LoginPage from './components/LoginPage'
+import ProductsPage from './components/ProductsPage'
+//import SingleProduct from './components/SingleProduct'
+//import CartPage from './components/CartPage'
+import App from './App'
+import './index.css'
 
 const router = createBrowserRouter([
   {
@@ -9,32 +17,32 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Products />
+        element: <ProductsPage />
       },
-      {
-        path: '/account',
-        element: <Account />
-      },
-      {
-        path: '/register',
-        element: <Register />
-      },
-      {
-        path: '/login',
-        element: <Login />
-      },
+      // {
+      //   path: '/account',
+      //   element: <AccountPage />
+      // },
+      // {
+      //   path: '/register',
+      //   element: <RegistrationPage />
+      // },
+      // {
+      //   path: '/login',
+      //   element: <LoginPage />
+      // },
       {
         path: '/products',
-        element: <Products />
+        element: <ProductsPage />
       },
-      {
-        path: '/products/:productId',
-        element: <SingleProduct />
-      },
-      {
-        path: '/cart',
-        element: <Cart />
-      },
+      // {
+      //   path: '/products/:productId',
+      //   element: <SingleProduct />
+      // },
+      // {
+      //   path: '/cart',
+      //   element: <CartPage />
+      // },
     ]
   }
 ])
