@@ -27,6 +27,26 @@ export const getSingleProduct = async (productId) => {
       console.error(error);
     }
   };
+  
+//   export const checkOutBook = async (productId) => {
+//     try{
+//       const response = await fetch(`${BASE_URL_2}/api/books/${productId}`, {
+//         method: "PATCH",
+//         body: JSON.stringify({
+//           available: false,
+//         }), headers: {
+//           "Content-type": "application/json",
+//           Authorization: `Bearer ${TOKEN}`,
+//         },
+//       });
+//       const result = await response.json();
+//       console.log(result);
+//       return result.book;
+//     } catch (err) {
+//       console.error(err);
+//     }
+//   }
+
 
   export const login = async (email, password) => {
     try {
@@ -73,3 +93,18 @@ export const getSingleProduct = async (productId) => {
     }
   };
   
+  export const account = async () => {
+    try {
+      const response = await fetch(`${BASE_URL_2}/api/users/me`, {
+        headers: {
+          "Content-type": "application/json",
+          Authorization: `Bearer ${TOKEN}`,
+        },
+      });
+      const result = await response.json();
+      console.log("RESULT:", result);
+      return result;
+    } catch (err) {
+      console.error(err);
+    }
+  };

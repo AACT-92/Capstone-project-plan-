@@ -28,7 +28,7 @@ const Products = () => {
             <h2>{product.title}</h2>
             <h3>${product.price}</h3>
             <img src={product.image} />
-            <button onClick={() => navigate(`/product/${product.id}`)}>
+            <button onClick={() => navigate(`/products/${product.id}`)}>
               see product
             </button>
           </div>

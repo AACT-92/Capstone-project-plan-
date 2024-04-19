@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import {Outlet} from 'react-router-dom'
-//import Navigation from './components/Navigation'  
+import Navigation from './components/Navigation'  
 
 
 const App = () => {
@@ -16,7 +16,7 @@ const App = () => {
 
   return (
     <div>
-   {/* <Navigation /> */}
+   <Navigation />
       <Outlet context={context}/>
     </div>
   )
