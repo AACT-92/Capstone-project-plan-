@@ -16,6 +16,7 @@ export const getAllProducts = async () => {
     console.error(error);
   }
 };
+//
 
 export const getSingleProduct = async (productId) => {
     try {
